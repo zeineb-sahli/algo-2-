@@ -1,0 +1,55 @@
+ALGORITHM sum 
+VAR
+    x , y : ARRAY_OF type[INTEGER];
+    sum,i,j:INTEGER:=0
+BEGIN
+FOR i FROM 0 TO x.length STEP 1 DO
+    WHILE (j<y.length) DO
+    if(x[i]=y[j])DO
+    x[i]=0
+    y[j]=0
+    j++
+    END_WHILE
+END_FOR
+FOR i 0  TO i<x.length STEP 1  DO
+    sum=sum+x[i]
+END_FOR
+END
+
+ALGORITHM sum of all distinct elements 
+VAR
+x , y : ARRAY_OF type[INTEGER];
+sum,i,j:INTEGER:=0
+BEGIN
+FOR i FROM 0 TO x.length STEP 1 DO
+    WHILE (j<y.length) DO
+    if(x[i]=y[j])DO
+sum==sum+arr[i]+y[j]
+    j++
+    END_WHILE
+END_FOR
+END
+
+ALGORITHM  method-2
+VAR
+    tab-1 : ARRAY_OF type[INTEGER];
+    tab-2 : ARRAY_OF type[INTEGER];
+    tab : ARRAY_OF type[INTEGER];
+    t:HASH_TABLE<integer,integer>
+BEGIN
+tab=tab-1 .concat tab-2
+FOR i FROM 0 TO tab.length STEP 1  DO
+if(x.lookup(tab[i]==true)) DO
+count=x.get(tab[i])
+else 
+x.insert(tab[i],1)
+ END_FOR
+ FOR i FROM 0 TO tab.length STEP 1 DO
+  IF (x.lookup(tab[i]>1)) THEN
+   sum=sum+tab[i]*x.get(tab[i])
+  END_IF
+  IF (x.lookup(tab[i]=1)) THEN
+    sum=sum+tab[i]
+  END_IF
+ END_FOR
+END
